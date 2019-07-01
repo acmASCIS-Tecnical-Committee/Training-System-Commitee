@@ -1,5 +1,5 @@
 {
-  "name": "traningsystem",
+  "name": "trainning-committee-system",
   "version": "1.0.0",
   "description": "Trainning System to comunicate  between mentors and trainees",
   "main": "server.js",
@@ -22,7 +22,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client-install": "npm install --prefix client",
+    "back-install": "npm install",
+    "configure": "concurrently \"npm run client-install\" \"npm run back-install\"",
+    "client": "npm start --prefix client",
+    "system": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
