@@ -1,5 +1,5 @@
 module.exports = {
   mongodbURI:
-    "mongodb+srv://technicalCom:acmtechnicalcom@cluster0-dz9un.mongodb.net/test?retryWrites=true",
-  secret: "TechnicalCommitteeSecret"
+  "mongodb+srv://mostafa:mostafa@cluster0-wd5re.mongodb.net/Test_Training?retryWrites=true&w=majority",
+    secret: "TechnicalCommitteeSecret"
 };

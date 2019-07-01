@@ -25,9 +25,16 @@ const UserSchema = new Schema({
         type: String,
         required : true
     },
-    problemsCount:{
-        type: int
-    },
+    problemsCount:[
+        {
+            judge: {
+                type: String
+            },
+            count: {
+                type: Number
+            }
+        }
+    ],
     password:{
         type: String,
         required : true
@@ -71,8 +78,14 @@ const UserSchema = new Schema({
     },
     confirmation:{
         type: Boolean
-    }
+    },
+    follower:[
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'user'
+        }
+    ]
 });
 
-module.exports = User = mongoose.model('users', UserSchema);
+module.exports = user = mongoose.model('user', UserSchema);
 
